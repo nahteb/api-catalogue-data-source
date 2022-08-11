@@ -1,3 +1,5 @@
+import json
+
 import requests
 import bs4
 from bs4 import BeautifulSoup, NavigableString, Tag
@@ -86,5 +88,15 @@ def get_list_of_dicts():
     return filtered_list
 
 
+def create_v1alpha_json_object(filtered_list):
+    json_data = {'api-version': "api.gov.uk/v1alpha"}
+    apis = []
+    for data in filtered_list:
+        api = {'api-version': "api.gov.uk/v1alpha", 'data': data}
+        apis.append(api)
+    json_data['apis'] = apis
+    return json.dumps(json_data)
+
+
 if __name__ == '__main__':
-    get_list_of_dicts()
+    create_v1alpha_json_object(get_list_of_dicts())
