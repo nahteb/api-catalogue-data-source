@@ -1,7 +1,6 @@
 import json
 
 import requests
-import bs4
 from bs4 import BeautifulSoup, NavigableString, Tag
 
 
@@ -11,21 +10,20 @@ def get_url_title(url):
     soup = BeautifulSoup(page.text, 'html.parser')
     # finds all links to API/API Standards as listed on the page
     links = [a['href'] for a in soup.find_all('a', href=True)]
-    filtereddivs = list(filter(lambda x: '/developer/api-catalogue/' in x, links))
+    filtered_divs = list(filter(lambda x: '/developer/api-catalogue/' in x, links))
     beg = 'https://digital.nhs.uk'
-    urls = []
-    for link in filtereddivs:
+    catalogue_urls = []
+    for link in filtered_divs:
         url_combined = beg + link
-        urls.append(url_combined)
-    return urls
+        catalogue_urls.append(url_combined)
+    return catalogue_urls
 
 
 # function to pull out the title of the API
 def get_api_title(api_url):
     page = requests.get(api_url)
     soup = BeautifulSoup(page.text, 'html.parser')
-    title = soup.find(class_='nhsd-t-heading-xxl nhsd-!t-margin-bottom-0').text
-    return title
+    return soup.find(class_='nhsd-t-heading-xxl nhsd-!t-margin-bottom-0').text
 
 
 # function to pull out all information between h2 headers
@@ -58,18 +56,17 @@ def get_api_info(url):
 
 
 # pulls out the overview from the dictionary from the api-info function, inputs title and creates a list of dictionaries
-def create_filtered_dict(apis, megadict, title):
+def create_filtered_dict(apis, unfiltered_dict, title):
     new_dict = {}
     page = requests.get(apis)
     soup = BeautifulSoup(page.text, 'html.parser')
-    description = megadict['overview']
-    url = apis
+    description = unfiltered_dict['overview']
     new_dict['name'] = title
     new_dict['description'] = description
-    new_dict['url'] = url
+    new_dict['url'] = apis
     new_dict['contact'] = 'https://digital.nhs.uk/developer/help-and-support'
     new_dict['organisation'] = 'NHS Digital'
-    new_dict['documentation-url'] = url
+    new_dict['documentation-url'] = apis
     return new_dict
 
 
@@ -81,8 +78,8 @@ def get_list_of_dicts():
     for apis in api_urls:
         title = get_api_title(apis)
         if 'standard' not in title:
-            megadict = get_api_info(apis)
-            initial_dict = create_filtered_dict(apis, megadict, title)
+            unfiltered_dict = get_api_info(apis)
+            initial_dict = create_filtered_dict(apis, unfiltered_dict, title)
             filtered_list.append(initial_dict)
 
     return filtered_list
