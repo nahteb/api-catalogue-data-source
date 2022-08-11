@@ -5,17 +5,21 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 
 # function to get URLs from page
 def get_url_title(url):
-    page = requests.get(url)
-    soup = BeautifulSoup(page.text, 'html.parser')
-    # finds all links to API/API Standards as listed on the page
-    links = [a['href'] for a in soup.find_all('a', href=True)]
-    filtereddivs = list(filter(lambda x: '/developer/api-catalogue/' in x, links))
-    beg = 'https://digital.nhs.uk'
-    urls = []
-    for link in filtereddivs:
-        url = beg + link
-        urls.append(url)
-    return urls
+  page = requests.get(URL)
+  soup = BeautifulSoup(page.text, 'html.parser')
+  #finds all links to API/API Standards as listed on the page
+  links = [a['href'] for a in soup.find_all('a', href=True)]
+  filtereddivs = list(filter(lambda x: '/developer/api-catalogue/' in x, links))
+  beg = 'https://digital.nhs.uk'
+  urls = []
+  for link in filtereddivs:
+    # removes standards links based on 'standard' being in url
+    if 'standard' in link:
+      continue
+    else:
+      url = beg + link
+      urls.append(url)
+  return urls
 
 
 # function to pull out all information between h2 headers
