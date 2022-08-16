@@ -24,19 +24,19 @@ jobs:
           pip install -r requirements.txt
           python scraper.py
 
-      - name: Upload apis
-        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
-        with:
-          name: apis
-          path: nhs-digital/apis
-          retention-days: 1
+#      - name: Upload apis
+#        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
+#        with:
+#          name: apis
+#          path: nhs-digital/apis
+#          retention-days: 1
 
       - name: Publish
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "github-actions"
           git add nhs-digital/apis
-          git commit -m 'Publish NHS apis'
+          git diff-index --quiet HEAD || git commit -m 'Publish NHS apis'
           git push
 
 
