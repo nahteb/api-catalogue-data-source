@@ -75,6 +75,7 @@ def get_list_of_dicts():
     URL = 'https://digital.nhs.uk/developer/api-catalogue'
     api_urls = get_url_title(URL)
     for apis in api_urls:
+        print(apis)
         title = get_api_title(apis)
         if 'standard' not in title:
             unfiltered_dict = get_api_info(apis)
