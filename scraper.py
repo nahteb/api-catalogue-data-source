@@ -1,4 +1,5 @@
 import json
+import os.path
 
 import requests
 from bs4 import BeautifulSoup, NavigableString, Tag
@@ -58,8 +59,6 @@ def get_api_info(url):
 # pulls out the overview from the dictionary from the api-info function, inputs title and creates a list of dictionaries
 def create_filtered_dict(apis, unfiltered_dict, title):
     new_dict = {}
-    page = requests.get(apis)
-    soup = BeautifulSoup(page.text, 'html.parser')
     description = unfiltered_dict['overview']
     new_dict['name'] = title
     new_dict['description'] = description
@@ -92,8 +91,14 @@ def create_v1alpha_json_object(filtered_list):
         api = {'api-version': "api.gov.uk/v1alpha", 'data': data}
         apis.append(api)
     json_data['apis'] = apis
-    return json.dumps(json_data)
+    return json.dumps(json_data, indent=4)
+
+
+def write_json_to_file(v1alpha_json_object):
+    with open(os.path.join('nhs-digital', 'apis'), 'w') as file:
+        file.write(v1alpha_json_object)
 
 
 if __name__ == '__main__':
-    create_v1alpha_json_object(get_list_of_dicts())
+    v1alpha_json_object = create_v1alpha_json_object(get_list_of_dicts())
+    write_json_to_file(v1alpha_json_object)
