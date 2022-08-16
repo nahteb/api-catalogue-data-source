@@ -31,26 +31,6 @@ jobs:
           path: nhs-digital/apis
           retention-days: 1
 
-
-  publish:
-    runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/main' }}
-    needs: build
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
-
-      - name: Download apis file
-        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
-        with:
-          name: apis
-          path: temp-nhs-digital/apis
-
-      - name: Overwrite nhs apis
-        run: |
-          - cat 'temp-nhs-digital/apis' > 'nhs-digital/apis'
-
       - name: Publish
         run: |
           git config --global user.email "github-actions@github.com"
@@ -58,3 +38,31 @@ jobs:
           git add nhs-digital/apis
           git commit -m 'Publish NHS apis'
           git push
+
+
+#  publish:
+#    runs-on: ubuntu-latest
+#    if: ${{ github.ref == 'refs/heads/main' }}
+#    needs: build
+#    permissions:
+#      contents: write
+#    steps:
+#      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+#
+#      - name: Download apis file
+#        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741
+#        with:
+#          name: apis
+#          path: temp-nhs-digital/apis
+#
+#      - name: Overwrite nhs apis
+#        run: |
+#          cat 'temp-nhs-digital/apis' > 'nhs-digital/apis'
+#
+#      - name: Publish
+#        run: |
+#          git config --global user.email "github-actions@github.com"
+#          git config --global user.name "github-actions"
+#          git add nhs-digital/apis
+#          git commit -m 'Publish NHS apis'
+#          git push
