@@ -4,7 +4,7 @@
         {
             "api-version": "api.gov.uk/v1alpha",
             "data": {
-                "name": "Access Control Service HL7 V3 API",
+                "name": "Access Control Service HL7 V3 API!!!",
                 "description": " Use this API to access the Access Control Service (ACS) - which manages consent to share patient information, including their SCR.GP systems must check consent to share before sharing, for example, a patient's Summary Care Record (SCR).You can:get the access permissions for a patient's documents, including their SCRset access permissions on a patient's documents, including their SCRNote theSummary Care Record - FHIR APIalso has endpoints enabling you to get and set access permissions,the same as this\u00a0ACS API.",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/access-control-service-hl7-v3",
                 "contact": "https://digital.nhs.uk/developer/help-and-support",
