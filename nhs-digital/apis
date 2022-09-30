@@ -598,6 +598,17 @@
         {
             "api-version": "api.gov.uk/v1alpha",
             "data": {
+                "name": "Out of hours",
+                "description": "  Use this message integration to send details of an out of hours (OOH) assessment from an out of hours GP system to the patient's registered GP.It usesMESHto send and receive messages.The message payload is actually not that standard, as explained below.",
+                "url": "https://digital.nhs.uk/developer/api-catalogue/out-of-hours",
+                "contact": "https://digital.nhs.uk/developer/help-and-support",
+                "organisation": "NHS Digital",
+                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/out-of-hours"
+            }
+        },
+        {
+            "api-version": "api.gov.uk/v1alpha",
+            "data": {
                 "name": "Pathology Messaging - EDIFACT",
                 "description": "  Use this integration to receive structured pathology test results in GP practices from pathology laboratories.This integration usesMESHto send and receiveUN/EDIFACTbased messages.For more details, see thePathology EDIFACT v1.003 Standard.If you are building a system to receive pathology test results, you can use ourLab Results adaptorto receive these EDIFACT results via\u00a0an easy-to-use FHIR-compliant format.Before you begin any development work using this integration,contact usto discuss your best options.",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/pathology-messaging-edifact",
