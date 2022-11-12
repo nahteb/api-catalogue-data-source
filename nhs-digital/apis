@@ -169,6 +169,17 @@
         {
             "api-version": "api.gov.uk/v1alpha",
             "data": {
+                "name": "Directory of Healthcare Services (Service Search) API",
+                "description": " Use this API to find information about NHS healthcare services, including lists of NHS organisation types, organisations, and coronavirus (COVID-19) walk-in sites.You can:search for NHS organisation types,\u00a0for example, GP practices or hospitalssearch for NHS organisations that provide healthcare services listed inNHS service near you,\u00a0for example,\u00a0Leeds General Infirmarysearch for coronavirus (COVID-19) walk-in sitesThis API was previously known as the Service Search API.",
+                "url": "https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services",
+                "contact": "https://digital.nhs.uk/developer/help-and-support",
+                "organisation": "NHS Digital",
+                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/directory-of-healthcare-services"
+            }
+        },
+        {
+            "api-version": "api.gov.uk/v1alpha",
+            "data": {
                 "name": "Directory of Services - Urgent and Emergency Care - REST API",
                 "description": " Use this API to accessDirectory of Services (DoS)information on a wide range of health and care services across England.You can search for services based on a combination of parameters:the patient\u2019s age, sex, and current locationthe patient\u2019s clinical needYou can also search for services using similar parameters, such as by:service type - find matching service type ID, location and optional patient detailsclinical term - find matching symptoms, location and optional patient detailsODS code - find active services with a matching ODS codeservice ID - find active services with a matching service identifierThis service\u00a0is widely used in an Urgent and Emergency Care context.It is not currently suitable for referrals from services usingNHS Pathwaysoutcomes, such as NHS 111 - for this, use theDirectory of Services - Urgent and Emergency Care - SOAP API.You need avalid DoS accountto use this API.",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/directory-of-services-urgent-and-emergency-care-rest",
@@ -545,10 +556,10 @@
             "data": {
                 "name": "NHS CIS Authentication (Spine Security Broker) API",
                 "description": " Use this API to verify the identity of healthcare workers\u00a0in England, such as NHS staff. It provides a single sign-on capability\u00a0across local and national digital services using physical and virtual smartcards.This API is also known as the Spine Security Broker (SSB), and is part of theNHS Care Identity Service (CIS).You can:access the Identity Server which serves up SSO Tokens and manages the sessions for users who have been successfully authenticatedaccess the\u00a0Identity Agent on the end user's workstation, which mediates the authentication transaction and serves subsequent user information on demand as part of the application's\u00a0authorisation processaccess the\u00a0Client Signing Interface, which provides client-side digital signing functions for the purposes of Content Commitment. This interface primarily uses cryptographic functions that execute on a user\u2019s smart card.Users can only be\u00a0authenticated if they are formally registered on the Spine. This\u00a0includes creating\u00a0a user profile, stored in the\u00a0Spine Directory Service\u00a0(SDS), containing the user\u2019s roles and other information that the Registration Authority or Service deems necessary to make appropriate data access decisions.This authentication service makes use ofsmartcardsto provide strong authentication for health care workers to control access to national services. It is being replaced byNHS Care Identity Service 2 (NHS CIS2), which providesadditional\u00a0authentication methodsfor scenarios\u00a0where a smartcard might not be\u00a0preferred or\u00a0appropriate.This API is described fully in theSpine External Interface Specification (EIS). Part 6 has the overview and part 7 the formal API specifications. These are\u00a0a set of Word documents that provide system developers - architects, designers\u00a0and builders -\u00a0with the necessary information to connect to Spine national services.",
-                "url": "https://digital.nhs.uk/developer/api-catalogue/spine-security-broker",
+                "url": "https://digital.nhs.uk/developer/api-catalogue/nhs-cis-authentication-spine-security-broker",
                 "contact": "https://digital.nhs.uk/developer/help-and-support",
                 "organisation": "NHS Digital",
-                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/spine-security-broker"
+                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/nhs-cis-authentication-spine-security-broker"
             }
         },
         {
@@ -747,17 +758,6 @@
                 "contact": "https://digital.nhs.uk/developer/help-and-support",
                 "organisation": "NHS Digital",
                 "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/reasonable-adjustment-flag-fhir"
-            }
-        },
-        {
-            "api-version": "api.gov.uk/v1alpha",
-            "data": {
-                "name": "Service Search API",
-                "description": " Use this API to find information about NHS healthcare services, including lists of NHS organisation types, organisations, and coronavirus (COVID-19) walk-in sites.search for NHS organisation types,\u00a0for example, GP practices, hospitalssearch for NHS organisations that provide services listed inNHS service near you,\u00a0for example,\u00a0Leeds General Infirmarysearch for coronavirus (COVID-19) walk-in sites",
-                "url": "https://digital.nhs.uk/developer/api-catalogue/service-search",
-                "contact": "https://digital.nhs.uk/developer/help-and-support",
-                "organisation": "NHS Digital",
-                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/service-search"
             }
         },
         {
