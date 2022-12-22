@@ -499,6 +499,17 @@
         {
             "api-version": "api.gov.uk/v1alpha",
             "data": {
+                "name": "National Data Opt-out - MESH",
+                "description": "  As a GP system, use this integration to:submit a list ofNHS numbersto the National Data Opt-outs Servicereceive a list back with the NHS numbers removed for those patients who have opted out of their data being usedYou can use theCheck for National Data Opt-outs Serviceto get existing National Data Opt-out preferences for one or more patients. If your use case is not met by the National Data Opt-outs Service,contact us.This integration usesMESHto send and receive messages.",
+                "url": "https://digital.nhs.uk/developer/api-catalogue/national-data-opt-out-service-mesh",
+                "contact": "https://digital.nhs.uk/developer/help-and-support",
+                "organisation": "NHS Digital",
+                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/national-data-opt-out-service-mesh"
+            }
+        },
+        {
+            "api-version": "api.gov.uk/v1alpha",
+            "data": {
                 "name": "National Event Management Service - FHIR API",
                 "description": "  Use this API to publish and subscribe to patient-centric healthcare event messages with theNational Events Management Service (NEMS).\u00a0 This national service is implemented on the NHSSpine.As a sending system, you can:publish an event messageAs a subscribing system, you can:create a subscriptionread a subscriptiondelete a subscriptionThis API uses apublish-subscribemodel - the sending system publishes specific range of healthcareevent messagestoNational Events Management Service (NEMS), and NEMS forwards the events to all subscribed systems viaMESH.NEMS authorises a specific list ofsystem suppliers and health and social care organisationsto publish information as events.For more details, see theIntroduction to the National Events Management Service.",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/national-events-management-service-fhir",
