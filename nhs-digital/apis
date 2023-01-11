@@ -466,17 +466,6 @@
         {
             "api-version": "api.gov.uk/v1alpha",
             "data": {
-                "name": "Legitimate Relationship Service - HL7 V3 API",
-                "description": " Use this API to access a patient's legitimate relationships. You might want to do this as part of yourinformation governance approach when accessing the Summary Care Record.You can:create legitimate relationshipschange the status of a legitimate relationshipquery legitimate relationshipsbatch query legitimate relationshipsidentify user role profilesmanage user workgroup membership",
-                "url": "https://digital.nhs.uk/developer/api-catalogue/legitimate-relationship-service-hl7-v3",
-                "contact": "https://digital.nhs.uk/developer/help-and-support",
-                "organisation": "NHS Digital",
-                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/legitimate-relationship-service-hl7-v3"
-            }
-        },
-        {
-            "api-version": "api.gov.uk/v1alpha",
-            "data": {
                 "name": "Message Exchange for Social Care and Health (MESH) API",
                 "description": " Use this API to securely transfer healthcare data between organisations using the Message Exchange for Social Care and Health (MESH). You interact with MESH via a virtual mailbox, only accessible to your organisation, by making calls to this API from your application. With the API, you can: check the number of messages in your inboxget the messageIds of messages in your inbox that are ready for downloaddownload a message, or a larger message which was sent to you as a series of chunksacknowledge the successful download of a message, which removes it from your inboxlook up the mailbox of an organisation you want to send data tosend a message, or a larger message as series of chunkstrack the status of messages that you sent from your outboxvalidate your mailbox every 24 hours to let Spine know it's still active This API can only be used where there is a legal basis to do so. The onboarding process for the API is longer than other MESH options. This is because we need to know that the product you\u2019re developing meets our security standards. The length of time it takes to onboard is heavily dependent on the resources your organisation puts into the process in developing your software and completing the application form. Expect the process to take a month or more. Get started You will need: a developer account to access the digital onboarding servicea MESH mailbox (with a unique ID and password)a client Transport Layer Security (TLS) certificatean environment shared secret to include it within theMESH authorization header We will provide these at different stages of your onboarding process. ",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api",
