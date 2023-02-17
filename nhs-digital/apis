@@ -730,6 +730,17 @@
         {
             "api-version": "api.gov.uk/v1alpha",
             "data": {
+                "name": "Personal Demographics Service MESH",
+                "description": " Use this message integration to search thePersonal Demographics Service (PDS)for patient details, using the MESH UI.ThePDS MESHservice - formerly known asMaster Patient Trace (MPT)- is provided for organisations that do not want to write their own software - typically NHS trusts or local authorities.It is not intended for software integration - use thePDS FHIR APIinstead.It is a batch message integration.\u00a0 It does not expect an immediate response from PDS.It requiresPDS access approvaland a MESH mailbox set up before you can use it.You can:create a file containing a trace requestsend the trace request to PDScheck for replies and download the responseFor how to use PDS MESH, seeUsing the PDS MESH service with the MESH user interface.",
+                "url": "https://digital.nhs.uk/developer/api-catalogue/personal-demographic-service-mesh",
+                "contact": "https://digital.nhs.uk/developer/help-and-support",
+                "organisation": "NHS Digital",
+                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/personal-demographic-service-mesh"
+            }
+        },
+        {
+            "api-version": "api.gov.uk/v1alpha",
+            "data": {
                 "name": "Personal Demographics Service Notifications - FHIR",
                 "description": "  Use this integration to receive notifications about changes to a patient's demographic details, including:birth notifications - although another option isPDS HL7 V3 APIdeath notificationschange of addresschange of GPany record change (beta) - to notify subscribers to synchronise their local PDS patient databaseWe share information about these events with healthcare workers in other organisations such as GPs, Emergency Departments and Local Authorities.This integration uses apublish-subscribemodel - the sending system publishes events toNational Events Management Service (NEMS), and NEMS forwards the events to all subscribed systems viaMessage Exchange for Social Care and Health (MESH).For example, when we updatePersonal\u00a0Demographics Service (PDS)with a birth, PDS sends a birth notification event\u00a0containing information about the birth to NEMS.\u00a0NEMS then sends the event to all\u00a0healthcare workers who have subscribed to receive\u00a0birth notifications.",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-notifications-fhir",
