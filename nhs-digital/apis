@@ -609,6 +609,17 @@
         {
             "api-version": "api.gov.uk/v1alpha",
             "data": {
+                "name": "Online Consultation - MESH",
+                "description": "  Use this message integration to send an online consultation form from a patient to a registered GP.This integration usesMESHto send and receive messages.",
+                "url": "https://digital.nhs.uk/developer/api-catalogue/online-consultation",
+                "contact": "https://digital.nhs.uk/developer/help-and-support",
+                "organisation": "NHS Digital",
+                "documentation-url": "https://digital.nhs.uk/developer/api-catalogue/online-consultation"
+            }
+        },
+        {
+            "api-version": "api.gov.uk/v1alpha",
+            "data": {
                 "name": "Ophthalmic Payments API",
                 "description": " Use this API to submit theGeneral Ophthalmic Service(GOS) payment claims toPrimary Care Support England(PCSE). Electronic claims are submitted via Practice Management Systems (PMS) and paper based claims are submitted via a bulk scanning\u00a0facility, provided by Capita Intelligent Communications (CIC).Activity data about NHS sight tests, optical vouchers, repairs and replacement are collected via a series of GOS payment claim forms.GOS1 \u2013 Application for an NHS funded sight testGOS3 \u2013 NHS optical vouchers and patient statementGOS4 \u2013 NHS optical repair/replacement vouchers application formGOS5 \u2013 Private sight tests with partial help towards the full costsGOS6 \u2013 Application for a mobile NHS funded sight testYou can electronically:submit GOS1 claims from PMS and bulk scanning facility to PCSEsubmit GOS3 claims from PMS and bulk scanning facility to PCSEsubmit GOS4 claims from PMS and bulk scanning facility to PCSEsubmit GOS5 claims from PMS and bulk scanning facility to PCSEsubmit GOS6 claims from PMS and bulk scanning facility to PCSEsubmit GOS6 pre-visit notifications from PMS to PCSEsubmit and retrieve GOS3 voucher only between PMS and PCSEsubmit a status request to PCSEYou cannot submit:GOS2 claimshealth cost 5 (HC5) refund claimspre-registration training (PRT) grant claimscontinuing education and training (CET) claimsA single GOS message can contain multiple claims for payment of a single GOS claim type, i.e. batch submission is allowed. A message cannot contain a mix of different GOS claim types.You can also submit GOS payment claims via PCSE Online. For further information, seeOphthalmic payments.",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/ophthalmic-payments",
