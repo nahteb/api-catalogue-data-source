@@ -742,7 +742,7 @@
             "api-version": "api.gov.uk/v1alpha",
             "data": {
                 "name": "Patient Care Aggregator - FHIR API",
-                "description": "  Use this API to get an aggregated list of referrals and bookings for a patient from secondary care providers. The API aggregates details of referrals and bookings from the following systems: NHS e-Referral Service(referrals and bookings)DrDoctor(bookings only)Patients Know Best(bookings only) We might add other providers in the future. This API is only for use in patient-facing applications, not point-of-care applications. For more details, seePatient access to referrals and bookings via the Patient Care Aggregator. ",
+                "description": "  Use this API to get an aggregated list of referrals and bookings for a patient from secondary care providers. The API aggregates details of referrals and bookings from a number of systems. For details, seestatus and roadmap. We might add other providers in the future. This API is only for use in patient-facing applications, not point-of-care applications. For more details, seePatient access to referrals and bookings via the Patient Care Aggregator. ",
                 "url": "https://digital.nhs.uk/developer/api-catalogue/patient-care-aggregator-fhir",
                 "contact": "https://digital.nhs.uk/developer/help-and-support",
                 "organisation": "NHS Digital",
